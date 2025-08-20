@@ -2,15 +2,17 @@
     "$schema": "https://raw.githubusercontent.com/firstBitMarksistskaya/jenkins-lib/master/resources/schema.json",
     "v8version": "8.3.25.1374", 
     "stages": {
-        "initSteps": false,
+        "initSteps": true,
 	"sonarqube": false,
         "edtValidate": false,
         "syntaxCheck": true,
         "bdd": false
     },
-    "syntaxCheck": {
-        "src": "src/cfe",
-        "ibconnection": "/F.D:\\DevOps\\Demo\\SSR",
-        "vrunnerSettings": "tools/vrunner.json"
+    "initInfobase": {
+    	"templateDBPath": "D:\\DevOps\\Demo\\SSR\\1Cv8.1CD", 
+    	"vrunnerSettings": "tools/vrunner.json",
+	"runMigration": false,
+	"useTemplate": true,
+	"skipRepository": true
     }
 }
