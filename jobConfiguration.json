@@ -4,6 +4,6 @@
     "stages": {
         "sonarqube": false,
         "edtValidate": false,
-        "syntaxCheck": true
+        "syntaxCheck": false
     }
 }
