@@ -22,7 +22,6 @@
         "--template": "D:\\DevOps\\Demo\\SSR\\1Cv8.1CD"
     },
     "compileext": {
-        "--src": "src/cfe",
         "--extension-name": "ЕИС"
     },
     "vanessa": {
