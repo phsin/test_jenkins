@@ -7,7 +7,7 @@
         "syntaxCheck": true
     },
     "initInfobase": {
-    "templateDBPath": "D:/DevOps/Demo/SSR",
+    "templateDBPath": "D:/DevOps/TestBase_SSR/1Cv8.dt",
     "vrunnerSettings": "tools/vrunner.json"
 }
 }
