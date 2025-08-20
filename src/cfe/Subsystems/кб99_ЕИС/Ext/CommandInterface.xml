@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandsVisibility>
+		<Command name="Document.ЕИС_ТранспортныйКонтейнер.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.ЕИС_КорректировочныйДокумент.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.кб99_ЕИС_ОбщиеНастройкиИнтеграции">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.еисНастройки.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.еисКонтрактныеТовары.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.еисКонтракты.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.еисЭтапы.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.еисГАР.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.кб99_СоответствияТоваровЕИС.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.кб99_КодыРегионаПоИндексу.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Constant.кб99_ЕИС_НазваниеРеквизитаГрузополучатель.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Constant.кб99_ЕИС_Лекарства.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Document.ЕИС_ТранспортныйКонтейнер.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Документы</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Document.ЕИС_КорректировочныйДокумент.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Документы</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.еисНастройки.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.еисКонтрактныеТовары.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.еисКонтракты.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.еисЭтапы.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.еисГАР.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.кб99_СоответствияТоваровЕИС.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.кб99_КодыРегионаПоИндексу.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Document.ЕИС_ТранспортныйКонтейнер.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Документы</CommandGroup>
+		</Command>
+		<Command name="Document.ЕИС_КорректировочныйДокумент.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Документы</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.кб99_ЕИС_ОбщиеНастройкиИнтеграции">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.еисНастройки.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.еисКонтрактныеТовары.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.еисКонтракты.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.еисЭтапы.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.еисГАР.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.кб99_СоответствияТоваровЕИС.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.кб99_КодыРегионаПоИндексу.StandardCommand.OpenList">
+			<CommandGroup>CommandGroup.ЕИС_Справочники</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>CommandGroup.ЕИС_Документы</Group>
+		<Group>CommandGroup.ЕИС_Справочники</Group>
+	</GroupsOrder>
+</CommandInterface>

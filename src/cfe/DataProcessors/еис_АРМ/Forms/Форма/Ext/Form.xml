@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>АРМ ЕИС</v8:content>
+		</v8:item>
+	</Title>
+	<Group>Horizontal</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЛеваяКолонка" id="109">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа левая колонка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа левая колонка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="110"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОтступ" id="133">
+					<Height>2</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация отступ</v8:content>
+						</v8:item>
+					</Title>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="135"/>
+				</PictureDecoration>
+				<Button name="ФормаЗагрузитьСписокКонтрактов" id="4">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>20</Width>
+					<Height>2</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<CommandName>Form.Command.ЗагрузитьСписокКонтрактов</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_ЗагрузитьКонтракты450Х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаЗагрузитьСписокКонтрактовРасширеннаяПодсказка" id="5"/>
+				</Button>
+				<Button name="ОбновитьКонтракты" id="154">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>20</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.ОбновитьКонтракты</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_ОбновитьКонтракты450х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ОбновитьКонтрактыРасширеннаяПодсказка" id="155"/>
+				</Button>
+				<Button name="СоздатьДокументыОтгрузки" id="144">
+					<Type>UsualButton</Type>
+					<Width>20</Width>
+					<Height>2</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<CommandName>Form.Command.СоздатьДокументыОтгрузки</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_Создать450Х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СоздатьДокументыОтгрузкиРасширеннаяПодсказка" id="145"/>
+				</Button>
+				<Button name="ФормакнОтправитьВЕИС" id="61">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>20</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.кнОтправитьВЕИС</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_Отправить450Х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормакнОтправитьВЕИСРасширеннаяПодсказка" id="62"/>
+				</Button>
+				<Button name="ФормакнПолучитьОтвет" id="103">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>20</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.кнПолучитьОтвет</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_ПолучитьОтвет450Х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормакнПолучитьОтветРасширеннаяПодсказка" id="104"/>
+				</Button>
+				<Button name="ПолучитьСтатусДокумента" id="149">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>20</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.ПолучитьСтатусДокумента</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_ПолучитьСтатус450Х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПолучитьСтатусДокументаРасширеннаяПодсказка" id="150"/>
+				</Button>
+				<Button name="ФормакнПодписать" id="105">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>20</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.кнПодписать</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_Подписать450Х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормакнПодписатьРасширеннаяПодсказка" id="106"/>
+				</Button>
+				<Button name="ФормакнЛичныйКабинет" id="107">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>20</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.кнЛичныйКабинет</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_ЛичныйКабинет450Х450</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормакнЛичныйКабинетРасширеннаяПодсказка" id="108"/>
+				</Button>
+				<LabelField name="Версия" id="136">
+					<DataPath>Версия</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<Width>15</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ContextMenu name="ВерсияКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="138"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПраваяКолонка" id="111">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа правая колонка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа правая колонка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="112"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапка" id="156">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="157"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПанельКнопок" id="126">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа панель кнопок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа панель кнопок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПанельКнопокРасширеннаяПодсказка" id="127"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПериод" id="128">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа период</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа период</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="129"/>
+									<ChildItems>
+										<InputField name="Период" id="130">
+											<DataPath>Период</DataPath>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ПериодКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="132"/>
+											<Events>
+												<Event name="OnChange">кнОбновитьСписокДокументов</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<CommandBar name="ГруппаКнопки" id="47">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="48"/>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДопПараметры" id="142">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фильтр</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа доп параметры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДопПараметрыРасширеннаяПодсказка" id="143"/>
+							<ChildItems>
+								<InputField name="Организация" id="1">
+									<DataPath>Организация</DataPath>
+									<Width>30</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">кнОбновитьСписокДокументов</Event>
+									</Events>
+								</InputField>
+								<InputField name="Контрагент" id="139">
+									<DataPath>Контрагент</DataPath>
+									<Width>30</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КонтрагентКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="141"/>
+									<Events>
+										<Event name="OnChange">кнОбновитьСписокДокументов</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Отгрузки" id="63">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.Отгрузки</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ОтгрузкиКонтекстноеМеню" id="64"/>
+					<AutoCommandBar name="ОтгрузкиКоманднаяПанель" id="65">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Popup name="ГруппаПодменюОтметитьДокументы" id="49">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа подменю отметить документы</v8:content>
+									</v8:item>
+								</Title>
+								<Picture>
+									<xr:Ref>StdPicture.CheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаПодменюОтметитьДокументыРасширеннаяПодсказка" id="50"/>
+								<ChildItems>
+									<Button name="кнОтметитьВсеДокументы" id="51">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнОтметитьВсеДокументы</CommandName>
+										<ExtendedTooltip name="кнОтметитьВсеДокументыРасширеннаяПодсказка" id="52"/>
+									</Button>
+									<Button name="кнОтметитьНеОтправленные" id="53">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнОтметитьНеОтправленные</CommandName>
+										<ExtendedTooltip name="кнОтметитьНеОтправленныеРасширеннаяПодсказка" id="54"/>
+									</Button>
+									<Button name="кнОтметитьНеОбработанные" id="55">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнОтметитьНеОбработанные</CommandName>
+										<ExtendedTooltip name="кнОтметитьНеОбработанныеРасширеннаяПодсказка" id="56"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="СнятьОтметки" id="57">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.СнятьОтметки</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="СнятьОтметкиРасширеннаяПодсказка" id="58"/>
+							</Button>
+							<Button name="кнОбновитьСписокДокументов" id="59">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.кнОбновитьСписокДокументов</CommandName>
+								<ExtendedTooltip name="кнОбновитьСписокДокументовРасширеннаяПодсказка" id="60"/>
+							</Button>
+							<Button name="Печать" id="158">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Печать</CommandName>
+								<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="159"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ОтгрузкиРасширеннаяПодсказка" id="66">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;fontsize 12&gt;&lt;color #000000&gt; &lt;img 0:3134394d-12d9-497e-954a-cfae3c28ff9e/&gt; - Статус запроса "Обработан успешно", документ выгружен в ЕИС&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt; &lt;img 0:ff112d9f-cbd7-4e0a-88b7-db0683cd2115/&gt; - Статус запроса "Обрабатывается" или "Обработан с ошибками"&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt; &lt;img 0:ce1628b6-6bc7-47fc-a435-40289ee6bc14/&gt; - В реализации имеется номенклатура не сопоставленная с товаром по контракту&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt; &lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;img 0:2b2a1dbd-1b0b-481c-9e8a-96155bcc054c/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt;&lt;color #000000&gt; - &lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt;&lt;color #000000&gt;Различаются итоговые суммы в реализации и транспортном контейнере&lt;/&gt;&lt;/&gt;</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<SearchStringAddition name="ОтгрузкиСтрокаПоиска" id="67">
+						<AdditionSource>
+							<Item>Отгрузки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОтгрузкиСтрокаПоискаКонтекстноеМеню" id="68"/>
+						<ExtendedTooltip name="ОтгрузкиСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ОтгрузкиСостояниеПросмотра" id="70">
+						<AdditionSource>
+							<Item>Отгрузки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОтгрузкиСостояниеПросмотраКонтекстноеМеню" id="71"/>
+						<ExtendedTooltip name="ОтгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ОтгрузкиУправлениеПоиском" id="73">
+						<AdditionSource>
+							<Item>Отгрузки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ОтгрузкиУправлениеПоискомКонтекстноеМеню" id="74"/>
+						<ExtendedTooltip name="ОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ОтгрузкиНомерСтроки" id="76">
+							<DataPath>Объект.Отгрузки.LineNumber</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтгрузкиНомерСтрокиКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ОтгрузкиНомерСтрокиРасширеннаяПодсказка" id="78"/>
+						</LabelField>
+						<CheckBoxField name="ОтгрузкиОтметка" id="82">
+							<DataPath>Объект.Отгрузки.Отметка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтгрузкиОтметкаКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ОтгрузкиОтметкаРасширеннаяПодсказка" id="84"/>
+						</CheckBoxField>
+						<InputField name="ОтгрузкиКонтракт" id="97">
+							<DataPath>Объект.Отгрузки.Контракт</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ОтгрузкиКонтрактКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="ОтгрузкиКонтрактРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="ОтгрузкиДокумент" id="79">
+							<DataPath>Объект.Отгрузки.Документ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ОтгрузкиДокументКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ОтгрузкиДокументРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="ОтгрузкиДокументОтгрузки" id="146">
+							<DataPath>Объект.Отгрузки.ДокументОтгрузки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ОтгрузкиДокументОтгрузкиКонтекстноеМеню" id="147"/>
+							<ExtendedTooltip name="ОтгрузкиДокументОтгрузкиРасширеннаяПодсказка" id="148"/>
+							<Events>
+								<Event name="Clearing">ОтгрузкиДокументОтгрузкиОчистка</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ОтгрузкиСтатусДокумента" id="151">
+							<DataPath>Объект.Отгрузки.СтатусДокумента</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтгрузкиСтатусДокументаКонтекстноеМеню" id="152"/>
+							<ExtendedTooltip name="ОтгрузкиСтатусДокументаРасширеннаяПодсказка" id="153"/>
+						</LabelField>
+						<LabelField name="ОтгрузкиКоличество" id="94">
+							<DataPath>Объект.Отгрузки.Количество</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтгрузкиКоличествоКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="ОтгрузкиКоличествоРасширеннаяПодсказка" id="96"/>
+						</LabelField>
+						<LabelField name="ОтгрузкиСтатус" id="91">
+							<DataPath>Объект.Отгрузки.СтатусЗапроса</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтгрузкиСтатусКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ОтгрузкиСтатусРасширеннаяПодсказка" id="93"/>
+						</LabelField>
+						<InputField name="ОтгрузкиКонтрагент" id="88">
+							<DataPath>Объект.Отгрузки.Контрагент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ОтгрузкиКонтрагентКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ОтгрузкиКонтрагентРасширеннаяПодсказка" id="90"/>
+						</InputField>
+						<InputField name="ОтгрузкиГрузополучатель" id="85">
+							<DataPath>Объект.Отгрузки.Грузополучатель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ОтгрузкиГрузополучательКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ОтгрузкиГрузополучательРасширеннаяПодсказка" id="87"/>
+						</InputField>
+						<InputField name="ОтгрузкиЦвет" id="100">
+							<DataPath>Объект.Отгрузки.Цвет</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтгрузкиЦветКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ОтгрузкиЦветРасширеннаяПодсказка" id="102"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.еис_АРМ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Версия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Отгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Отгрузки.Цвет</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">КРАСНЫЙ</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Отгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Отгрузки.Цвет</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">ЗЕЛЕНЫЙ</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#AAFFA0</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Отгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Отгрузки.Цвет</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">ЖЕЛТЫЙ</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#F9FF74</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Отгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Отгрузки.Цвет</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">СИНИЙ</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#A6CAFF</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьСписокКонтрактов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить контракты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить список контрактов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСписокКонтрактов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнОтметитьВсеДокументы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отметить все документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтметитьВсеДокументы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнОтметитьНеОтправленные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не отправленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отметить не отправленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтметитьВсеДокументы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнОтметитьНеОбработанные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Со статусом "Обрабатывается"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отметить не обработанные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтметитьВсеДокументы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьОтметки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять отметки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять отметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьОтметки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнОбновитьСписокДокументов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн обновить список документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнОбновитьСписокДокументов</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнОтправитьВЕИС" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отправить ВЕИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтправитьВЕИС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнПолучитьОтвет" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить ответ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн получить ответ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПолучитьОтвет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнПодписать" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн подписать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПодписать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнЛичныйКабинет" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн личный кабинет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЛичныйКабинет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьДокументыОтгрузки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документы отгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>0:24b0b5e0-b79e-497e-8695-a8b7eeca88fd</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьДокументыОтгрузки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПолучитьСтатусДокумента" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить статус документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСтатусДокумента</Action>
+		</Command>
+		<Command name="ОбновитьКонтракты" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить контракты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить контракты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьКонтракты</Action>
+		</Command>
+		<Command name="Печать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Печать</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

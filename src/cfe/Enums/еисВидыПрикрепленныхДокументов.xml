@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Enum uuid="47ed3bf6-30d8-4450-a747-82d10b225fd8">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.еисВидыПрикрепленныхДокументов" category="Ref">
+				<xr:TypeId>b917cfec-8330-46fc-b04a-079831816fad</xr:TypeId>
+				<xr:ValueId>1f3bebfa-07c3-4098-8d10-e917d25afe3f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.еисВидыПрикрепленныхДокументов" category="Manager">
+				<xr:TypeId>76c0f284-9ecf-4730-bbeb-62a8ea8cd77a</xr:TypeId>
+				<xr:ValueId>2ac7d6cd-feff-4d11-834e-4f2d172d5057</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.еисВидыПрикрепленныхДокументов" category="List">
+				<xr:TypeId>60a3dd72-df3d-42f1-b658-90e1df55c504</xr:TypeId>
+				<xr:ValueId>758cf59d-7eba-41df-81d0-bf5d15f02396</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>еисВидыПрикрепленныхДокументов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды прикрепленных документов</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="8fa81dfb-ef65-4a47-bc56-2db70717edb6">
+				<Properties>
+					<Name>ДокументОПриемке</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ о приемке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>1</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c9994750-ed54-49c2-a90b-c74d127e6a3d">
+				<Properties>
+					<Name>ПротоколСогласованияЦен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протокол согласования цен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>2</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6d5253ac-11d3-48d9-a75b-272110c5a47c">
+				<Properties>
+					<Name>ТоварнаяНакладная</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товарная накладная</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>3</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="cb28bcb9-8a09-48c0-a972-adb3ad9b4076">
+				<Properties>
+					<Name>РегистрационноеУдостоверениеЛекарственногоПрепарата</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрационное удостоверение лекарственного препарата</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>4</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="c95aab21-37ad-43cf-942b-cba37155f5fa">
+				<Properties>
+					<Name>ДокументПодтверждающийСоответствиеТовара</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ, подтверждающий соответствие Товара</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>5</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="85fea653-f3c7-4399-960d-7aba150beb16">
+				<Properties>
+					<Name>ИнструкцияПоМедицинскомуПрименению</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструкция по медицинскому применению Товара на русском языке</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>6</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="7cfaab87-bfad-4b0c-accc-10ebf12c46ce">
+				<Properties>
+					<Name>Спецификация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Спецификация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>7</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a333f688-3b9f-4ffc-bdae-3cb2861f9ea8">
+				<Properties>
+					<Name>ТехническиеХарактеристики</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Технические характеристики</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>8</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5a57cba8-8e27-4e99-8563-c036a4267161">
+				<Properties>
+					<Name>ИныеДокументы5_3</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Иные документы, предусмотренные п. 5.3 контракта</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>9</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b47db74f-f19a-4143-b6dd-486d271aac03">
+				<Properties>
+					<Name>ПлатежноРасчетныйДокумент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платежно-расчетный документ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>10</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="194c84fc-b90c-4b7a-ad8b-050cba2ad23b">
+				<Properties>
+					<Name>ПрочиеДокументыПредусмотренныеКонтрактом</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие документы, предусмотренные контрактом</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>11</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="5fe596e5-1eaa-400e-9bd5-18284758c37f">
+				<Properties>
+					<Name>ИнформацияОСтранеПроисхожденияИлиОПроизводителеТовара</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация о стране происхождения или о производителе товара</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>12</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2e57d08e-f4a7-49a4-bca3-db9cbf3ccdb4">
+				<Properties>
+					<Name>ДокументыОплатуКонтрактаИДокументыОНачисленииНеустоек</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы, оплату контракта и документы о начислении неустоек (штрафов, пеней)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>13</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e128d169-86c3-4ea3-8ef2-d4a61e814ddd">
+				<Properties>
+					<Name>ДокументОРасхождениях</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ о расхождениях</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>14</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d3a5e479-3700-458b-a04e-1da1f928bc38">
+				<Properties>
+					<Name>ДокументОРезультатахПроведеннойЭкспертизы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ о результатах проведенной экспертизы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>15</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="64e2b08f-305d-468f-a0e7-d52f8e681285">
+				<Properties>
+					<Name>ПротоколРазногласий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протокол разногласий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>17</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bba66abe-79ac-4f30-a558-9bb1e8371a40">
+				<Properties>
+					<Name>РешениеПриемочнойКомиссии</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Решение приемочной комиссии</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>18</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="6f5fe175-d88c-4d96-a95c-95b59ea575a0">
+				<Properties>
+					<Name>ДосудебноеСогласие</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Досудебное согласие</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>19</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="131c4361-b712-4dc4-89bd-15e1bb8b9afe">
+				<Properties>
+					<Name>РешениеСуда</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Решение суда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>20</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ee4d9e1c-812c-4768-b684-f888a5524dc5">
+				<Properties>
+					<Name>ОснованиеДляПлатежногоДокумента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание для платежного документа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>21</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

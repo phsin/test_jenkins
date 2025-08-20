@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Subsystem uuid="8d4fde7e-f72c-4cd0-8a61-ba938b0f4193">
+		<Properties>
+			<Name>кб99_ЕИС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЕИС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_ЕИС</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЕИС_ТранспортныйКонтейнер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.еис_АРМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.еисКонтракты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.еисЭтапы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.еисКонтрактныеТовары</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.еисНастройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.еисГАР</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.еисСтатусыЗапросов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.еисСтатусыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.еисСтатусЗапроса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.еисСтатусыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ГМ_ЕИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕИС_Защита</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕИС_Клиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ЕИС_Документы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ЕИС_Справочники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ЗагрузитьКонтракты450Х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ЕИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ЛичныйКабинет450Х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ОбновитьКонтракты450х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_Отправить450Х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_Подписать450Х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ПолучитьОтвет450Х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ПолучитьСтатус450Х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_Создать450Х450</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.еисВидыПрикрепленныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб99_КодыРегионаПоИндексу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.кб99_ЕИС_ОбщиеНастройкиИнтеграции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.кб99_ЕИС_Лекарства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.кб99_ЕИС_НазваниеРеквизитаГрузополучатель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕИС_МодульУТ10</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕИС_МодульУТ11</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕИС_МодульУНФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_ЕИС_ФормаКонстант</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.кб99_ВерсияКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.кб99_ФормироватьКодыМаркировкиОСУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб99_СоответствияТоваровЕИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЕИС_МодульБП3</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.кб99_СодержаниеУслугиШрифт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.еисТипыОбъектовЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.еисСпособыУказанияЦеныКонтракта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЕИС_КорректировочныйДокумент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ДляПодсказкиЗеленый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ДляПодсказкиЖелтый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ДляПодсказкиСиний</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ДляПодсказкиКирпичный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.еис_Сервис</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_Сертификат</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>
