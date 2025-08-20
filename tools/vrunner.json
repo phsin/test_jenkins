@@ -34,7 +34,6 @@
         "--xddExitCodePath": "./build/xddExitCodePath.txt"
     },
     "syntax-check": {
-        "--src": "./src/cfe",
         "--groupbymetadata": true,
         "--exception-file": "tools/syntax-check-excludes.txt",
         "--junitpath": "out/syntax-check/junit/junit.xml",

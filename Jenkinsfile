@@ -43,7 +43,7 @@ pipeline {
                 echo "Сборка и загрузка расширения из исходников"
                 bat """
                     chcp 65001 > nul
-                    vrunner compileext ${env.EXTENSION_SRC} ЕИС --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                    vrunner compileext ${env.EXTENSION_SRC} кб99_ЕИС --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
                 """
             }
         }
@@ -53,7 +53,7 @@ pipeline {
                 echo "Выполнение синтаксического контроля"
                 bat """
                     chcp 65001 > nul
-                    vrunner syntax-check --src ${env.EXTENSION_SRC} --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                    vrunner syntax-check --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
                 """
             }
         }
