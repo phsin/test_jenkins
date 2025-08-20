@@ -62,8 +62,9 @@ pipeline {
             steps {
                 echo "Запуск BDD тестов"
                 bat """
-                    chcp 65001 > nul
-                    vrunner bdd --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                    call test.cmd                 
+                    @rem chcp 65001 > nul
+                    @rem vrunner bdd --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
                 """
             }
         }

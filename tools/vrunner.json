@@ -1,12 +1,12 @@
 {
     "$schema": "https://raw.githubusercontent.com/vanessa-opensource/vanessa-runner/develop/vanessa-runner-schema.json",
     "default": {
-        "--ibconnection": "/F.D:\\DevOps\\Demo\\SSR",
+        "--ibconnection": "/F.D:\\DevOps\\Demo\\SSR\\1Cv8.1CD",
         "--db-user": "Admin",
         "--db-pwd": "",
         "--root": ".",
         "--workspace": ".",
-        "--v8version": "8.3.25",
+        "--v8version": "8.3.25.1374",
         "--locale": "ru",
         "--language": "ru",
         "--additional": "/DisplayAllFunctions /Lru  /iTaxi /TESTMANAGER",

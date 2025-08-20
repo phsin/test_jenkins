@@ -1,2 +1,3 @@
 @chcp 65001
-call vrunner vanessa %*
+@rem call vrunner vanessa %*
+call vrunner vanessa --ibconnection "/F./build/ib" --settings tools/vrunner.json 
