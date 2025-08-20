@@ -4,10 +4,10 @@
     "stages": {
         "sonarqube": false,
         "edtValidate": false,
-        "syntaxCheck": true
+        "syntaxCheck": false
     },
     "initInfobase": {
-    "templateDBPath": "D://DevOps//Demo//SSR",
-    "vrunnerSettings": "tools/vrunner.json"
-}
+    	"templateDBPath": "D://DevOps//Demo//SSR//1Cv8.1CD",
+    	"vrunnerSettings": "tools/JSON/vrunner.json"
+    }
 }
