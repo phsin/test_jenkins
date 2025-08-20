@@ -21,11 +21,14 @@ pipeline {
                 echo "Создание информационной базы из шаблона"
                 script {
                     if (fileExists("${env.TEMPLATE_DB}")) {
+                        echo "Копирование шаблона базы данных"
                         bat """
                             chcp 65001 > nul
-                            vrunner init-dev --template "${env.TEMPLATE_DB}" --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                            if exist "${env.IB_PATH}" rmdir /s /q "${env.IB_PATH}"
+                            xcopy /E /I /Y "${env.TEMPLATE_DB}" "${env.IB_PATH}"
                         """
                     } else {
+                        echo "Создание новой пустой базы данных"
                         bat """
                             chcp 65001 > nul
                             vrunner init-dev --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
@@ -40,7 +43,7 @@ pipeline {
                 echo "Сборка и загрузка расширения из исходников"
                 bat """
                     chcp 65001 > nul
-                    vrunner compileext ${env.EXTENSION_SRC} --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                    vrunner compileext ${env.EXTENSION_SRC} ЕИС --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
                 """
             }
         }
@@ -50,7 +53,7 @@ pipeline {
                 echo "Выполнение синтаксического контроля"
                 bat """
                     chcp 65001 > nul
-                    vrunner syntax-check --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                    vrunner syntax-check --src ${env.EXTENSION_SRC} --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
                 """
             }
         }
@@ -59,14 +62,20 @@ pipeline {
     post {
         always {
             echo "Очистка временных файлов"
-            publishHTML([
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'out/syntax-check',
-                reportFiles: '*.html',
-                reportName: 'Syntax Check Report'
-            ])
+            script {
+                if (fileExists('out/syntax-check')) {
+                    publishHTML([
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: 'out/syntax-check',
+                        reportFiles: '*.html',
+                        reportName: 'Syntax Check Report'
+                    ])
+                } else {
+                    echo "Отчёты синтаксической проверки не найдены"
+                }
+            }
         }
         success {
             echo "Pipeline выполнен успешно"
