@@ -13,6 +13,8 @@
     	"vrunnerSettings": "tools/vrunner.json",
 	"runMigration": false,
 	"skipLoadRepo": true,
-	"onlyFromFiles": true
+	"onlyFromFiles": false,
+	"buildExtensions": true,
+	"extensionsPath": "src/cfe"
     }
 }

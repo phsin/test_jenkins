@@ -10,16 +10,17 @@
         "--locale": "ru",
         "--language": "ru",
         "--additional": "/DisplayAllFunctions /Lru  /iTaxi /TESTMANAGER",
-        "--ordinaryapp": "-1",
-        "--src": "src/cf"
+        "--ordinaryapp": "-1"
     },
     "loadrepo": {
-        "--src": "src/cf",
         "--disable-support": true
     },
     "update-dev": {
-        "--src": "src/cf",
         "--disable-support": true
+    },
+    "compileext": {
+        "--src": "src/cfe",
+        "--extension-name": "ЕИС"
     },
     "vanessa": {
         "--vanessasettings": "./tools/JSON/vanessaBddConf.json"
@@ -31,6 +32,7 @@
         "--xddExitCodePath": "./build/xddExitCodePath.txt"
     },
     "syntax-check": {
+        "--src": "src/cfe",
         "--groupbymetadata": true,
         "--exception-file": "tools/syntax-check-excludes.txt",
         "--junitpath": "out/syntax-check/junit/junit.xml",
