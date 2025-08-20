@@ -9,7 +9,7 @@
         "bdd": true
     },
     "initInfobase": {
-    	"templateDBPath": "D://DevOps//Demo//SSR//1Cv8.1CD",
+    	"templateDBPath": "D:/DevOps/Demo/SSR/1Cv8.1CD",
     	"vrunnerSettings": "tools/vrunner.json",
 	"runMigration": false
     }
