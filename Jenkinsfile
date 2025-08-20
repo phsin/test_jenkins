@@ -48,12 +48,22 @@ pipeline {
             }
         }
         
-        stage('Синтаксический контроль') {
+        // stage('Синтаксический контроль') {
+        //     steps {
+        //         echo "Выполнение синтаксического контроля"
+        //         bat """
+        //             chcp 65001 > nul
+        //             vrunner syntax-check --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+        //         """
+        //     }
+        // }
+        
+        stage('Start BDD Tests') {
             steps {
-                echo "Выполнение синтаксического контроля"
+                echo "Запуск BDD тестов"
                 bat """
                     chcp 65001 > nul
-                    vrunner syntax-check --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                    vrunner bdd --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
                 """
             }
         }
