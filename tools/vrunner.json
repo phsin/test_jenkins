@@ -10,7 +10,16 @@
         "--locale": "ru",
         "--language": "ru",
         "--additional": "/DisplayAllFunctions /Lru  /iTaxi /TESTMANAGER",
-        "--ordinaryapp": "-1"
+        "--ordinaryapp": "-1",
+        "--src": "src/cf"
+    },
+    "loadrepo": {
+        "--src": "src/cf",
+        "--disable-support": true
+    },
+    "update-dev": {
+        "--src": "src/cf",
+        "--disable-support": true
     },
     "vanessa": {
         "--vanessasettings": "./tools/JSON/vanessaBddConf.json"
