@@ -1,6 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/firstBitMarksistskaya/jenkins-lib/master/resources/schema.json",
-    "v8version": "8.3.25",    
+    "v8version": "8.3.25",   
+    "secrets": {
+        "storagePath": "a45c67ea-94a0-4935-8a5f-f31349be4baa",
+        "storage" : "16ef42f0-fd55-47a6-bcd2-30a624f1d28e"
+    },
     "stages": {
         "sonarqube": false,
         "edtValidate": false,
