@@ -1,13 +1,12 @@
 {
     "$schema": "https://raw.githubusercontent.com/firstBitMarksistskaya/jenkins-lib/master/resources/schema.json",
-    "v8version": "8.3.25",
-    "secrets": {
-        "storagePath": "a45c67ea-94a0-4935-8a5f-f31349be4baa",
-        "storage" : "16ef42f0-fd55-47a6-bcd2-30a624f1d28e"
-    },
+    "v8version": "8.3.25",    
     "stages": {
         "sonarqube": false,
         "edtValidate": false,
         "syntaxCheck": true
-    }
+    },
+    "initInfobase": {
+    "templateDBPath": "D:\DevOps\TestBase_SSR\1Cv8.dt"
+}
 }
