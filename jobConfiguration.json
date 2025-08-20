@@ -5,11 +5,11 @@
         "initSteps": true,
 	"sonarqube": false,
         "edtValidate": false,
-        "syntaxCheck": false,
-        "bdd": true
+        "syntaxCheck": true,
+        "bdd": false
     },
     "initInfobase": {
-    	"templateDBPath": "D:/DevOps/Demo/SSR/1Cv8.1CD",
+    	"templateDBPath": "D:\\DevOps\\Demo\\SSR\\1Cv8.1CD", 
     	"vrunnerSettings": "tools/vrunner.json",
 	"runMigration": false
     }
