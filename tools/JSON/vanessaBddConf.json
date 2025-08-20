@@ -1,7 +1,7 @@
 ﻿{
     "$schema":"https://raw.githubusercontent.com/vanessa-opensource/vanessa-runner/develop/behavior-schema.json",
     "ИмяСборки": "БСП",
-    "ВерсияПлатформы": "8.3.25",
+    "ВерсияПлатформы": "8.3.25.1374",
     "ВыводитьСообщенияВФайл": "./build/bdd-log.txt",
     "КаталогПроекта": "$workspaceRoot",
     "КаталогФич": "$workspaceRoot/./features",
@@ -12,7 +12,7 @@
     "КлиентыТестирования": [
         {
             "Имя": "ПроверкаОбновления",
-            "ПутьКИнфобазе": "File=D:/DevOps/Demo/SSR",
+            "ПутьКИнфобазе": "File=D:\\DevOps\\Demo\\SSR\\1Cv8.1CD",
             "ДопПараметры": "/NАдмин",
             "ТипКлиента": "Тонкий",
             "ИмяКомпьютера": "localhost",
