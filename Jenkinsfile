@@ -25,7 +25,7 @@ pipeline {
                         bat """
                             chcp 65001 > nul
                             if exist "${env.IB_PATH}" rmdir /s /q "${env.IB_PATH}"
-                            xcopy /E /I /Y "${env.TEMPLATE_DB}" "${env.IB_PATH}"
+                            echo D | xcopy /E /I /Y "${env.TEMPLATE_DB}" "${env.IB_PATH}"
                         """
                     } else {
                         echo "Создание новой пустой базы данных"
