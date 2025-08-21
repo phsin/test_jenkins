@@ -24,8 +24,17 @@
     "compileext": {
         "--extension-name": "кб99_ЕИС"
     },
-    "vanessa": {
-        "--vanessasettings": "./tools/JSON/vanessaBddConf.json"
+    "vanessa": {        
+        "--vanessasettings": "./tools/VAParams.json",        
+        "--pathvanessa": "./tools/vanessa-automation-single.epf",
+        "--workspace": ".",
+        "--additional": "/DisplayAllFunctions /L ru"        
+    },
+    "vanessa-add": {        
+        "--vanessasettings": "./tools/JSON/vanessaAutomationSingle.json",
+        "--pathvanessa": "./tools/vanessa-automation.epf",
+        "--workspace": ".",
+        "--additional": "/DisplayAllFunctions /L ru"        
     },
     "xunit": {
         "--xddConfig": "./tools/JSON/vanessaTddConf.json",

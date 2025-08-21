@@ -1,0 +1,50 @@
+{
+    "$schema": "https://raw.githubusercontent.com/vanessa-opensource/vanessa-runner/develop/behavior-schema.json",
+    "ИмяСборки": "VanessaAutomationSingle",
+    "ВерсияПлатформы": "8.3.25.1374",
+    "ВыводитьСообщенияВФайл": "./build/automation-log.txt",
+    "КаталогПроекта": "$workspaceRoot",
+    "КаталогФич": "$workspaceRoot/features",
+    
+    "КлиентыТестирования": [
+        {
+            "Имя": "ТестКлиент",
+            "ПутьКИнфобазе": "File=D:\\DevOps\\Demo\\SSR\\1Cv8.1CD",
+            "ДопПараметры": "/NАдмин",
+            "ТипКлиента": "Тонкий",
+            "ИмяКомпьютера": "localhost",
+            "ПортЗапускаТестКлиента": "48000"
+        }
+    ],
+
+    "ЗагрузитьСценарии": true,
+    "ВыполнитьСценарии": true,
+    "ЗавершитьРаботуСистемы": true,
+    "ЗакрытьTestClientПослеЗапускаСценариев": true,
+    
+    "ДелатьОтчетВФорматеАллюр": true,
+    "ДелатьОтчетВФорматеjUnit": true,
+    "ДелатьОтчетВФорматеCucumberJson": true,
+    "ДелатьЛогВыполненияСценариевВТекстовыйФайл": true,
+    
+    "КаталогOutputAllure": "$workspaceRoot/build/reports/allure",
+    "КаталогOutputAllureБазовый": "$workspaceRoot/build/reports/allure",
+    "КаталогOutputjUnit": "$workspaceRoot/build/reports/junit",
+    "КаталогOutputCucumberJson": "$workspaceRoot/build/reports/cucumber",
+    "ИмяФайлаЛогВыполненияСценариев": "$workspaceRoot/build/reports/automation-log.txt",
+    
+    "ВыгружатьСтатусВыполненияСценариевВФайл": true,
+    "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "$workspaceRoot/build/reports/BuildStatus.log",
+    
+    "СписокТеговИсключение": [
+        "IgnoreOnCIMainBuild",
+        "IgnoreOnUFBuilds", 
+        "Ignore",
+        "Draft"
+    ],
+    
+    "ВыводитьВЛогВыполнениеШагов": true,
+    "DebugLog": false,
+    "ТаймаутЗапуска1С": "25",
+    "ЯзыкГенератораGherkin": "ru"
+}
