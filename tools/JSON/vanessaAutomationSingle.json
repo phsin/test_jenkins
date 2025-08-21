@@ -34,7 +34,7 @@
     "ИмяФайлаЛогВыполненияСценариев": "$workspaceRoot/build/reports/automation-log.txt",
     
     "ВыгружатьСтатусВыполненияСценариевВФайл": true,
-    "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "$workspaceRoot/build/reports/BuildStatus.log",
+    "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "$workspaceRoot/build/BuildStatus.log",
     
     "СписокТеговИсключение": [
         "IgnoreOnCIMainBuild",
