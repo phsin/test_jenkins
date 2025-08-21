@@ -22,7 +22,7 @@
         "--template": "D:\\DevOps\\Demo\\SSR\\1Cv8.1CD"
     },
     "compileext": {
-        "--extension-name": "ЕИС"
+        "--extension-name": "кб99_ЕИС"
     },
     "vanessa": {
         "--vanessasettings": "./tools/JSON/vanessaBddConf.json"
