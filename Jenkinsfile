@@ -92,11 +92,7 @@ pipeline {
                     try {
                         bat """
                             chcp 65001 > nul
-                            echo ========================================
-                            echo Запуск Vanessa Automation Single
-                            echo Время начала: %date% %time%
-                            echo ========================================
-                            call test.cmd 2>&1 | tee build\\logs\\vanessa-console.log
+                            call test.cmd 
                         """
                     } catch (Exception e) {
                         echo "BDD тесты завершились с ошибками: ${e.getMessage()}"
@@ -139,22 +135,6 @@ pipeline {
         always {
             echo "Публикация отчетов и сбор статистики"
             script {
-                // Вывод информации о созданных логах
-                bat '''
-                    echo =======================================
-                    echo СТАТИСТИКА ЛОГОВ ТЕСТИРОВАНИЯ
-                    echo =======================================
-                    if exist build\\logs (
-                        echo Список логов в build\\logs:
-                        dir /s build\\logs\\*.log
-                        echo.
-                        echo Размеры файлов логов:
-                        forfiles /p build\\logs /m *.log /c "cmd /c echo @path - @fsize bytes" 2>nul || echo Логи не найдены
-                    ) else (
-                        echo Каталог build\\logs не существует
-                    )
-                    echo =======================================
-                '''
                 // Публикация отчетов Allure
                 if (fileExists('build/out/allure')) {
                     allure([
