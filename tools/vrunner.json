@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/vanessa-opensource/vanessa-runner/develop/vanessa-runner-schema.json",
     "default": {
-        "--ibconnection": "/F.D:\\DevOps\\Demo\\SSR\\1Cv8.1CD",
+        "--ibconnection": "/F./build/ib",
         "--db-user": "Admin",
         "--db-pwd": "",
         "--root": ".",

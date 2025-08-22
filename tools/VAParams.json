@@ -15,13 +15,13 @@
     "КаталогOutputjUnit": "$workspaceRoot/build/out/junit",
     "КаталогOutputCucumberJson": "$workspaceRoot/build/out/cucumber",
     "ИмяФайлаЛогВыполненияСценариев": "$workspaceRoot/build/log.txt",
-    "КомандаСделатьСкриншот": "\"C:\\Program Files (x86)\\IrfanView\\i_view32.exe\" /capture=1 /convert=",
+    "КомандаСделатьСкриншот": "\"C:\\Program Files\\IrfanView\\i_view64.exe\" /capture=1 /convert=",
     "ВыполнятьШагиАссинхронно": false,
     "ПриоритетНастроекПользователя": true,
-    "ДелатьСкриншотПриВозникновенииОшибки": false,
+    "ДелатьСкриншотПриВозникновенииОшибки": true,
     "КаталогOutputСкриншоты": "$workspaceRoot/build/out/ScreenShots",
     "ВерсияПлатформыДляГенерацииEPF": "",
-    "ДиапазонПортовTestclient": "",
+    "ДиапазонПортовTestclient": "48000-48100",
     "СписокТеговИсключение": ["Draft","IgnoreOnCIMainBuild"]
   }
   
