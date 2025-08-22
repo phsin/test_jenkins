@@ -9,6 +9,19 @@ pipeline {
     }
     
     stages {
+
+        stage('Check Allure on agent') {
+            steps {
+                script {
+                def allureHome = tool name: 'allure2'   // имя из Global Tool Configuration
+                withEnv(["PATH+ALLURE=${allureHome}/bin"]) {
+                    sh(isUnix: true, script: 'allure --version || true')
+                    bat(label: 'Allure version (Windows)', script: 'allure --version || exit /b 0')
+                }
+                }
+            }
+        }
+
         stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
