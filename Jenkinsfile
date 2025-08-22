@@ -13,10 +13,17 @@ pipeline {
         stage('Check Allure on agent') {
             steps {
                 script {
-                def allureHome = tool name: 'allure2'   // имя из Global Tool Configuration
-                withEnv(["PATH+ALLURE=${allureHome}/bin"]) {
-                    bat(label: 'Allure version (Windows)', script: 'allure --version || exit /b 0')
-                }
+                    try {
+                        def allureHome = tool name: 'allure2'   // имя из Global Tool Configuration
+                        withEnv(["PATH+ALLURE=${allureHome}/bin"]) {
+                            bat(label: 'Allure version (Windows)', script: 'allure --version || exit /b 0')
+                        }
+                        echo "Allure tool найден и настроен"
+                    } catch (Exception e) {
+                        echo "Allure tool не настроен в Jenkins: ${e.getMessage()}"
+                        echo "Проверьте Global Tool Configuration -> Allure Commandline"
+                        echo "Или настройте переменную окружения ALLURE_HOME"
+                    }
                 }
             }
         }
@@ -24,7 +31,7 @@ pipeline {
         stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
-                bat '''
+        /*         bat '''
                     rem Создание основных каталогов
                     if not exist build mkdir build
                     if not exist build\\out mkdir build\\out
@@ -42,7 +49,7 @@ pipeline {
                     if not exist build\\reports\\junit mkdir build\\reports\\junit
                     
                     echo Каталоги созданы
-                '''
+                ''' */
             }
         }
         
@@ -170,9 +177,23 @@ pipeline {
                     ])
                 }
                 
-                // Публикация результатов тестов
-                if (fileExists('build/out/allure')) {
-                    publishTestResults testResultsPattern: 'build/out/allure/*.xml'
+                // Публикация результатов тестов JUnit (если есть)
+                script {
+                    def junitFiles = findFiles(glob: 'build/reports/junit/*.xml')
+                    if (junitFiles.length > 0) {
+                        echo "Найдено JUnit файлов: ${junitFiles.length}"
+                        junit testResults: 'build/reports/junit/*.xml', allowEmptyResults: true
+                    } else {
+                        echo "JUnit файлы не найдены в build/reports/junit/"
+                        // Попытка поиска в других местах
+                        def allureXmlFiles = findFiles(glob: 'build/out/allure/*.xml')
+                        if (allureXmlFiles.length > 0) {
+                            echo "Найдено XML файлов в Allure: ${allureXmlFiles.length}"
+                            junit testResults: 'build/out/allure/*.xml', allowEmptyResults: true
+                        } else {
+                            echo "Тестовые XML файлы не найдены"
+                        }
+                    }
                 }                
                 // Публикация HTML отчета с логами
                 if (fileExists('build/logs')) {

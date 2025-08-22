@@ -4,6 +4,8 @@
   "КаталогФич": "$workspaceRoot\\features",
   "ДелатьОтчетВФорматеАллюр": true,
   "КаталогOutputAllureБазовый": "$workspaceRoot\\build\\out\\allure",
+  "ДелатьОтчетВФорматеjUnit": true,
+  "КаталогВыгрузкиJUnit": "$workspaceRoot\\build\\reports\\junit",
   "ВыгружатьСтатусВыполненияСценариевВФайл": true,
   "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "$workspaceRoot\\build\\buildstatus.log",
   "ДелатьСкриншотПриВозникновенииОшибки": true,
