@@ -15,7 +15,6 @@ pipeline {
                 script {
                 def allureHome = tool name: 'allure2'   // имя из Global Tool Configuration
                 withEnv(["PATH+ALLURE=${allureHome}/bin"]) {
-                    sh(isUnix: true, script: 'allure --version || true')
                     bat(label: 'Allure version (Windows)', script: 'allure --version || exit /b 0')
                 }
                 }
