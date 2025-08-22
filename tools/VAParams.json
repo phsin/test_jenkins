@@ -33,7 +33,6 @@
     "КаталогOutputСкриншоты": "$workspaceRoot/build/reports/ScreenShots",
     "ВерсияПлатформыДляГенерацииEPF": "",
     "ДиапазонПортовTestclient": "48000-48100",
-    "ПутьКИнфобазе": "File=./build/ib",
     "ПутьКVanessaADD": "./tools/vanessa-automation-single.epf", 
     "ПутьКVanessa": "./tools/vanessa-automation-single.epf",
     "СписокТеговИсключение": ["Draft","IgnoreOnCIMainBuild"]
