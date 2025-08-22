@@ -25,7 +25,7 @@
         "--extension-name": "кб99_ЕИС"
     },
     "vanessa": {        
-        "--vanessasettings": "./tools/VAParams.json",
+        "--vanessasettings": "./tools/EISParams.json",
         "--pathvanessa": "./tools/vanessa-automation-single.epf",
         "--workspace": ".",
         "--additional": "/DisplayAllFunctions /L ru"        
