@@ -12,7 +12,25 @@ pipeline {
         stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
-                bat 'if not exist build\\out mkdir build\\out'
+                bat '''
+                    rem Создание основных каталогов
+                    if not exist build mkdir build
+                    if not exist build\\out mkdir build\\out
+                    if not exist build\\out\\allure mkdir build\\out\\allure
+                    
+                    rem Создание каталогов для логов
+                    if not exist build\\logs mkdir build\\logs
+                    if not exist build\\logs\\errors mkdir build\\logs\\errors
+                    if not exist build\\logs\\client mkdir build\\logs\\client
+                    
+                    rem Создание каталогов для отчетов
+                    if not exist build\\reports mkdir build\\reports
+                    if not exist build\\reports\\allure mkdir build\\reports\\allure
+                    if not exist build\\reports\\ScreenShots mkdir build\\reports\\ScreenShots
+                    if not exist build\\reports\\junit mkdir build\\reports\\junit
+                    
+                    echo Каталоги созданы
+                '''
             }
         }
         
@@ -38,12 +56,21 @@ pipeline {
             }
         }
         
+        // stage('Обновление из хранилища') {
+        //     steps {
+        //         echo "Загрузка конфигурации из хранилища"
+        //         bat """
+        //             chcp 65001 > nul
+        //             call build.cmd repo
+        //         """
+        //     }
+        // }
+        
         stage('Сборка и загрузка расширения') {
             steps {
                 echo "Сборка и загрузка расширения из исходников"
                 bat """
-                    chcp 65001 > nul
-                    vrunner compileext ${env.EXTENSION_SRC} кб99_ЕИС --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                    call build.cmd 
                 """
             }
         }
@@ -60,18 +87,74 @@ pipeline {
         
         stage('Start BDD Tests') {
             steps {
-                echo "Запуск BDD тестов"
-                bat """
-                    call test.cmd                 
-                """
+                echo "Запуск BDD тестов с подробным логированием"
+                script {
+                    try {
+                        bat """
+                            chcp 65001 > nul
+                            echo ========================================
+                            echo Запуск Vanessa Automation Single
+                            echo Время начала: %date% %time%
+                            echo ========================================
+                            call test.cmd 2>&1 | tee build\\logs\\vanessa-console.log
+                        """
+                    } catch (Exception e) {
+                        echo "BDD тесты завершились с ошибками: ${e.getMessage()}"
+                        
+                        // Выводим содержимое основных логов
+                        if (fileExists('build/buildstatus.log')) {
+                            echo "=== Содержимое buildstatus.log ==="
+                            bat 'type build\\buildstatus.log'
+                        }
+                        
+                        if (fileExists('build/logs/vanessa-execution.log')) {
+                            echo "=== Содержимое vanessa-execution.log (последние 50 строк) ==="
+                            bat 'powershell "Get-Content build\\logs\\vanessa-execution.log -Tail 50"'
+                        }
+                        
+                        if (fileExists('build/logs/vanessa-console.log')) {
+                            echo "=== Содержимое vanessa-console.log (последние 30 строк) ==="
+                            bat 'powershell "Get-Content build\\logs\\vanessa-console.log -Tail 30"'
+                        }
+                        
+                        // Список файлов ошибок
+                        bat '''
+                            echo === Список файлов ошибок ===
+                            if exist build\\logs\\errors\\*.* (
+                                dir /b build\\logs\\errors\\*.*
+                            ) else (
+                                echo Файлов ошибок не найдено
+                            )
+                        '''
+                        
+                        // Продолжаем выполнение для публикации отчетов
+                        currentBuild.result = 'UNSTABLE'
+                    }
+                }
             }
         }
     }
     
     post {
         always {
-            echo "Публикация отчетов"
+            echo "Публикация отчетов и сбор статистики"
             script {
+                // Вывод информации о созданных логах
+                bat '''
+                    echo =======================================
+                    echo СТАТИСТИКА ЛОГОВ ТЕСТИРОВАНИЯ
+                    echo =======================================
+                    if exist build\\logs (
+                        echo Список логов в build\\logs:
+                        dir /s build\\logs\\*.log
+                        echo.
+                        echo Размеры файлов логов:
+                        forfiles /p build\\logs /m *.log /c "cmd /c echo @path - @fsize bytes" 2>nul || echo Логи не найдены
+                    ) else (
+                        echo Каталог build\\logs не существует
+                    )
+                    echo =======================================
+                '''
                 // Публикация отчетов Allure
                 if (fileExists('build/out/allure')) {
                     allure([
@@ -99,9 +182,24 @@ pipeline {
                 if (fileExists('build/out/allure')) {
                     publishTestResults testResultsPattern: 'build/out/allure/*.xml'
                 }                
-                // Архивирование артефактов
+                // Публикация HTML отчета с логами
+                if (fileExists('build/logs')) {
+                    publishHTML([
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: 'build/logs',
+                        reportFiles: '*.log',
+                        reportName: 'Vanessa Test Logs',
+                        reportTitles: 'Логи тестирования Vanessa'
+                    ])
+                }
+                
+                // Архивирование всех артефактов
                 archiveArtifacts artifacts: 'build/**/*.log', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'build/logs/**/*', allowEmptyArchive: true
                 archiveArtifacts artifacts: 'build/out/allure/**/*', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'build/reports/**/*', allowEmptyArchive: true
             }
         }
         success {

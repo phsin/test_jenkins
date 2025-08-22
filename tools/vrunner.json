@@ -12,17 +12,15 @@
         "--additional": "/DisplayAllFunctions /Lru  /iTaxi /TESTMANAGER",
         "--ordinaryapp": "-1"
     },
-    "loadrepo": {
-        "--disable-support": true
-    },
-    "update-dev": {
-        "--disable-support": true
+    "updateext": {
+        "--extension-name": "кб99_ЕИС"
     },
     "init-dev": {
         "--template": "D:\\DevOps\\Demo\\SSR\\1Cv8.1CD"
     },
     "compileext": {
-        "--extension-name": "кб99_ЕИС"
+        "--extension-name": "кб99_ЕИС",
+        "--out": "./build/кб99_ЕИС.cfe"
     },
     "vanessa": {        
         "--vanessasettings": "./tools/VAmin.json",
