@@ -26,7 +26,7 @@
     },
     "vanessa": {        
         "--vanessasettings": "./tools/EISParams.json",
-        "--pathvanessa": "./tools/vanessa-automation-single.epf",
+        "--pathvanessa": "D:\\1cBase\\Tests\\vanessa-automation\\vanessa-automation.epf",
         "--workspace": ".",
         "--additional": "/DisplayAllFunctions /L ru"        
     },
