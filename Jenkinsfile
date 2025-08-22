@@ -12,15 +12,7 @@ pipeline {
         stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
-                bat '''
-                    if not exist build mkdir build
-                    if not exist build\\out mkdir build\\out
-                    if not exist build\\reports mkdir build\\reports
-                    if not exist build\\reports\\allure mkdir build\\reports\\allure
-                    if not exist build\\reports\\junit mkdir build\\reports\\junit
-                    if not exist build\\reports\\ScreenShots mkdir build\\reports\\ScreenShots
-                    if not exist build\\reports\\errors mkdir build\\reports\\errors
-                '''
+                bat 'if not exist build\\out mkdir build\\out'
             }
         }
         
@@ -69,25 +61,9 @@ pipeline {
         stage('Start BDD Tests') {
             steps {
                 echo "Запуск BDD тестов"
-                script {
-                    try {
-                        bat """
-                            chcp 65001 > nul
-                            call test.cmd                 
-                        """
-                    } catch (Exception e) {
-                        echo "BDD тесты завершились с ошибками: ${e.getMessage()}"
-                        // Проверяем, существует ли файл статуса
-                        if (fileExists('build/buildstatus.log')) {
-                            echo "Содержимое buildstatus.log:"
-                            bat 'type build\\buildstatus.log'
-                        } else {
-                            echo "Файл buildstatus.log не найден"
-                        }
-                        // Продолжаем выполнение для публикации отчетов
-                        currentBuild.result = 'UNSTABLE'
-                    }
-                }
+                bat """
+                    call test.cmd                 
+                """
             }
         }
     }
@@ -119,13 +95,13 @@ pipeline {
                     ])
                 }
                 
-                // Архивирование артефактов
-                archiveArtifacts artifacts: 'build/**/*.log', allowEmptyArchive: true
-                
                 // Публикация результатов тестов
                 if (fileExists('build/out/allure')) {
                     publishTestResults testResultsPattern: 'build/out/allure/*.xml'
-                }
+                }                
+                // Архивирование артефактов
+                archiveArtifacts artifacts: 'build/**/*.log', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'build/out/allure/**/*', allowEmptyArchive: true
             }
         }
         success {
@@ -146,7 +122,7 @@ URL: ${env.BUILD_URL}
 
 Проверьте логи для получения деталей."""
                 }
-            }
+            }            
         }
     }
 }
