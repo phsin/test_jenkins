@@ -97,23 +97,23 @@ pipeline {
                     } catch (Exception e) {
                         echo "BDD тесты завершились с ошибками: ${e.getMessage()}"
                         
-                        // Выводим содержимое основных логов
-                        if (fileExists('build/buildstatus.log')) {
-                            echo "=== Содержимое buildstatus.log ==="
-                            bat 'type build\\buildstatus.log'
-                        }
+                        // // Выводим содержимое основных логов
+                        // if (fileExists('build/buildstatus.log')) {
+                        //     echo "=== Содержимое buildstatus.log ==="
+                        //     bat 'type build\\buildstatus.log'
+                        // }
                         
-                        if (fileExists('build/logs/vanessa-execution.log')) {
-                            echo "=== Содержимое vanessa-execution.log (последние 50 строк) ==="
-                            bat 'powershell "Get-Content build\\logs\\vanessa-execution.log -Tail 50"'
-                        }
+                        // if (fileExists('build/logs/vanessa-execution.log')) {
+                        //     echo "=== Содержимое vanessa-execution.log (последние 50 строк) ==="
+                        //     bat 'powershell "Get-Content build\\logs\\vanessa-execution.log -Tail 50"'
+                        // }
                         
-                        if (fileExists('build/logs/vanessa-console.log')) {
-                            echo "=== Содержимое vanessa-console.log (последние 30 строк) ==="
-                            bat 'powershell "Get-Content build\\logs\\vanessa-console.log -Tail 30"'
-                        }
+                        // if (fileExists('build/logs/vanessa-console.log')) {
+                        //     echo "=== Содержимое vanessa-console.log (последние 30 строк) ==="
+                        //     bat 'powershell "Get-Content build\\logs\\vanessa-console.log -Tail 30"'
+                        // }
                         
-                        // Список файлов ошибок
+/*                         // Список файлов ошибок
                         bat '''
                             echo === Список файлов ошибок ===
                             if exist build\\logs\\errors\\*.* (
@@ -121,7 +121,7 @@ pipeline {
                             ) else (
                                 echo Файлов ошибок не найдено
                             )
-                        '''
+                        ''' */
                         
                         // Продолжаем выполнение для публикации отчетов
                         currentBuild.result = 'UNSTABLE'
