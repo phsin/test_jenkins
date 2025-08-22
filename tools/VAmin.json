@@ -1,0 +1,8 @@
+{
+  "ВыполнитьСценарии": true,
+  "ЗавершитьРаботуСистемы": true,
+  "КаталогФич": "$workspaceRoot/features",
+  "ДелатьОтчетВФорматеАллюр": true,
+  "КаталогOutputAllureБазовый": "$workspaceRoot/build/out/allure",
+  "СписокТеговИсключение": ["Draft","IgnoreOnCIMainBuild"]
+}

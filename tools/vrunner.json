@@ -25,12 +25,14 @@
         "--extension-name": "кб99_ЕИС"
     },
     "vanessa": {        
-        "--vanessasettings": "./tools/EISParams.json",
-        "--pathvanessa": "D:\\1cBase\\Tests\\vanessa-automation\\vanessa-automation.epf",
+        "--vanessasettings": "./tools/VAmin.json",
+        "--pathvanessa": "./tools/vanessa-automation-single.epf",
         "--workspace": ".",
         "--additional": "/DisplayAllFunctions /L ru"        
     },
     "vanessa-add": {        
+        "--pathvanessa": "D:\\1cBase\\Tests\\vanessa-automation\\vanessa-automation.epf",
+        "--vanessasettings": "./tools/EISParams.json",
         "--vanessasettings": "./tools/JSON/vanessaAutomationSingle.json",
         "--vanessasettings": "./tools/VAParams.json",        
         "--pathvanessa": "./tools/vanessa-automation.epf",
