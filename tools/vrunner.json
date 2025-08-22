@@ -28,7 +28,8 @@
         "--vanessasettings": "./tools/VAmin.json",
         "--pathvanessa": "./tools/vanessa-automation-single.epf",
         "--workspace": ".",
-        "--additional": "/DisplayAllFunctions /L ru"        
+        "--additional": "/DisplayAllFunctions /L ru",
+        "--buildstatus": "./build/buildstatus.log"
     },
     "vanessa-add": {        
         "--pathvanessa": "D:\\1cBase\\Tests\\vanessa-automation\\vanessa-automation.epf",

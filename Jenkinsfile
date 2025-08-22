@@ -12,7 +12,15 @@ pipeline {
         stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
-                bat 'if not exist build\\out mkdir build\\out'
+                bat '''
+                    if not exist build mkdir build
+                    if not exist build\\out mkdir build\\out
+                    if not exist build\\reports mkdir build\\reports
+                    if not exist build\\reports\\allure mkdir build\\reports\\allure
+                    if not exist build\\reports\\junit mkdir build\\reports\\junit
+                    if not exist build\\reports\\ScreenShots mkdir build\\reports\\ScreenShots
+                    if not exist build\\reports\\errors mkdir build\\reports\\errors
+                '''
             }
         }
         
@@ -61,17 +69,45 @@ pipeline {
         stage('Start BDD Tests') {
             steps {
                 echo "Запуск BDD тестов"
-                bat """
-                    call test.cmd                 
-                """
+                script {
+                    try {
+                        bat """
+                            chcp 65001 > nul
+                            call test.cmd                 
+                        """
+                    } catch (Exception e) {
+                        echo "BDD тесты завершились с ошибками: ${e.getMessage()}"
+                        // Проверяем, существует ли файл статуса
+                        if (fileExists('build/buildstatus.log')) {
+                            echo "Содержимое buildstatus.log:"
+                            bat 'type build\\buildstatus.log'
+                        } else {
+                            echo "Файл buildstatus.log не найден"
+                        }
+                        // Продолжаем выполнение для публикации отчетов
+                        currentBuild.result = 'UNSTABLE'
+                    }
+                }
             }
         }
     }
     
     post {
         always {
-            echo "Очистка временных файлов"
+            echo "Публикация отчетов"
             script {
+                // Публикация отчетов Allure
+                if (fileExists('build/out/allure')) {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'build/out/allure']]
+                    ])
+                }
+                
+                // Публикация синтаксических отчетов
                 if (fileExists('out/syntax-check')) {
                     publishHTML([
                         allowMissing: true,
@@ -81,8 +117,14 @@ pipeline {
                         reportFiles: '*.html',
                         reportName: 'Syntax Check Report'
                     ])
-                } else {
-                    echo "Отчёты синтаксической проверки не найдены"
+                }
+                
+                // Архивирование артефактов
+                archiveArtifacts artifacts: 'build/**/*.log', allowEmptyArchive: true
+                
+                // Публикация результатов тестов
+                if (fileExists('build/out/allure')) {
+                    publishTestResults testResultsPattern: 'build/out/allure/*.xml'
                 }
             }
         }
@@ -91,6 +133,20 @@ pipeline {
         }
         failure {
             echo "Pipeline завершился с ошибкой"
+            script {
+                // Отправка email при ошибке
+                if (env.CHANGE_ID == null) { // только для основной ветки
+                    mail to: 'fa@kb99.pro',
+                         subject: "Jenkins Build Failed: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                         body: """Сборка завершилась с ошибкой.
+                         
+Проект: ${env.JOB_NAME}
+Номер сборки: ${env.BUILD_NUMBER}
+URL: ${env.BUILD_URL}
+
+Проверьте логи для получения деталей."""
+                }
+            }
         }
     }
 }

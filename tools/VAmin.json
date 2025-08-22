@@ -3,6 +3,8 @@
   "ЗавершитьРаботуСистемы": true,
   "КаталогФич": "$workspaceRoot/features",
   "ДелатьОтчетВФорматеАллюр": true,
-  "КаталогOutputAllureБазовый": "$workspaceRoot/build/out/allure",
+  "КаталогOutputAllureБазовый": "$workspaceRoot\\build\\out\\allure",
+  "ВыгружатьСтатусВыполненияСценариевВФайл": true,
+  "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "$workspaceRoot\\build\\buildstatus.log",
   "СписокТеговИсключение": ["Draft","IgnoreOnCIMainBuild"]
 }
