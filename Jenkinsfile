@@ -10,7 +10,7 @@ pipeline {
     
     stages {
 
-        stage('Check Allure on agent') {
+      /*   stage('Check Allure on agent') {
             steps {
                 script {
                     try {
@@ -26,11 +26,12 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
 
-        stage('Diag session') {
+      /*   stage('Diag session') {
             steps {
                 bat '''
+                @chcp 65001
                 echo ===== CURRENT SESSION =====
                 echo SESSIONNAME=%SESSIONNAME%
                 query user
@@ -41,13 +42,13 @@ pipeline {
                 wmic process where "name='java.exe'" get processid,sessionid,commandline
                 '''
             }
-        }
+        } */
 
 
-        stage('Подготовка') {
+    /*     stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
-        /*         bat '''
+                 bat '''
                     rem Создание основных каталогов
                     if not exist build mkdir build
                     if not exist build\\out mkdir build\\out
@@ -65,9 +66,9 @@ pipeline {
                     if not exist build\\reports\\junit mkdir build\\reports\\junit
                     
                     echo Каталоги созданы
-                ''' */
+                ''' 
             }
-        }
+        } */
         
         stage('Создание ИБ из шаблона') {
             steps {
