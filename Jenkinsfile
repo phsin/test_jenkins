@@ -28,6 +28,22 @@ pipeline {
             }
         }
 
+        stage('Diag session') {
+            steps {
+                bat '''
+                echo ===== CURRENT SESSION =====
+                echo SESSIONNAME=%SESSIONNAME%
+                query user
+                echo ===== 1C PROCESSES =====
+                tasklist /v /fi "imagename eq 1cv8.exe"
+                wmic process where "name='1cv8.exe'" get processid,sessionid,commandline
+                echo ===== JAVA/AGENT SESSION =====
+                wmic process where "name='java.exe'" get processid,sessionid,commandline
+                '''
+            }
+        }
+
+
         stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
