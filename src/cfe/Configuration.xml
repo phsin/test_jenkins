@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.кб99_ЕИС_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor>https://kb99.pro</Vendor>
-			<Version>1.35.250815</Version>
+			<Version>1.35.250825</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>

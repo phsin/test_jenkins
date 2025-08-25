@@ -518,7 +518,6 @@
 						</InputField>
 						<InputField name="ОтгрузкиЦвет" id="100">
 							<DataPath>Объект.Отгрузки.Цвет</DataPath>
-							<Visible>false</Visible>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="ОтгрузкиЦветКонтекстноеМеню" id="101"/>
 							<ExtendedTooltip name="ОтгрузкиЦветРасширеннаяПодсказка" id="102"/>
